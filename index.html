@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="author" content="Felipe Baranovsky">
+        <meta name="description" content="A fantastic game based on the renowned game Spelling Bee">
+        <link rel="shortcut icon" href="icon\image.svg" type="image/x-icon"> 
+        
+        <title>
+            PaWorD
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <!-- CSS only -->
+        <script src="fileJs.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <t class="neonText">P</t><t style="font-size: 100px;">aWorD</t>
+                        </div>
+                    </div>
+            </h1>
+        </header>
+
+        <div class="container">
+            <div style="height: 0px;">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="TOPplayers" id="TOPplayers">
+                           <table style="position: relative;display: flex;align-items: center;justify-content: center;">
+                               <tr>
+                                   <td style="border-bottom: 2px dotted rgb(225, 3, 245);width: 650px;">
+                                       <t>TOP PLAYERS</t>
+                                   </td>
+                               </tr>
+                           </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12">
+                            <div class="scoreScreen" id="scoreScreen">
+                                0 pts  
+                            </div>
+                            <div>
+                                <form>
+                                    <input class="screen" type="text" id="screen" maxlength="40" color="white" onkeydown="wordEdition(event)">
+                                </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wordHistory" id="wordHistory">
+                         <!--Colocar el div para las palabras puestas-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="ProgressContainer"  onkeydown="wordEdition(event)">
+                            <div class="outer">
+                                <div class="inner">
+                                    <button class="PanelBtn" id="P1" style="margin-top: -200px;" onmousedown="clickPanelBtn(id, event)"></button>
+                                    <button class="PanelBtn" id="P2" style="margin-left: -150px;margin-top: -100px;" onmousedown="clickPanelBtn(id, event)"></button>
+                                    <button class="PanelBtn" id="P3" style="margin-left: 150px;margin-top: -100px;" onmousedown="clickPanelBtn(id, event)"></button> 
+                                    <button class="PanelBtn" id="P4" style="margin-left: -300px;" onmousedown="clickPanelBtn(id, event)">S</button>
+                                    <button class="PanelBtn" id="P5" onmousedown="clickPanelBtn(id, event)">A</button>
+                                    <button class="PanelBtn" id="P6" style="margin-left: 300px;" onmousedown="clickPanelBtn(id, event)">T</button>
+                                    <button class="PanelBtn" id="P7" style="margin-top: 100px;margin-left: -150px;" onmousedown="clickPanelBtn(id, event)">T</button>
+                                    <button class="PanelBtn" id="P8" style="margin-top: 100px;margin-left: 150px;" onmousedown="clickPanelBtn(id, event)">R</button>  
+                                    <button class="PanelBtn" id="P9" style="margin-top: 200px;" onmousedown="clickPanelBtn(id, event)"></button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <svg class="ContainerSvg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500px" height="500px">
+                            <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#e91e63" />
+                                <stop offset="100%" stop-color="#673ab7" />
+                            </linearGradient>
+                            </defs>
+                            <circle style="stroke-dashoffset: 0;" id="cir" cx="250" cy="250" r="240" stroke-linecap="round" />
+                        </svg>    
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

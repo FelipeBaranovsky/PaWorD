@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(53, 53, 53);
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.neonText {
+    animation: pulsate 0.61s ease-in-out infinite alternate;    
+    font-size: 100px;
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 22px #f09,
+      0 0 32px #f09,
+      0 0 40px #f09,
+      0 0 50px #f09,
+      0 0 50px #f09;
+  }
+
+  @keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 2px #fff,
+        0 0 6px #fff,
+        0 0 12px #fff,
+        0 0 22px #f09,
+        0 0 32px #f09,
+        0 0 40px #f09,
+        0 0 50px #f09,
+        0 0 50px #f09;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 2px #fff,
+      0 0 8px #fff,
+      0 0 12px #fff,
+      0 0 20px rgba(255, 0, 153, 0.438),
+      0 0 40px rgba(255, 0, 153, 0.438),
+      0 0 60px rgba(255, 0, 153, 0.438),
+      0 0 65px rgba(255, 0, 153, 0.438),
+      0 0 90px rgba(255, 0, 153, 0.438);
+  
+  }
+}
+
+.TOPplayers{
+    display:none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    position: absolute;
+    background-color: #ea00ff2f;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.205);
+    height: 620px;
+    width: 650px;
+    margin-left: -300px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.scoreScreen{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    background-color: #ea00ff2f;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.205);
+    margin-top: 100px;
+    margin-left: 140px;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.WordPanel{
+    position: relative;
+    width: 600px;
+    height: 80px;
+}
+
+.screen{
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+    text-transform: uppercase;
+    text-align: middle;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    width : 700px; 
+    font-size : 70px;
+    background-color: #6d446d91;
+    border-color: transparent;  
+    margin-left: -100px;
+    margin-top: 150px;
+}
+
+/*Progress*/
+.ContainerSvg{
+    z-index: 0;
+    position: absolute;
+}
+circle{
+    display: none;
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 1510;
+    stroke-dashoffset: 0; /*Variable a modificar*/
+}
+
+.ProgressContainer{
+    z-index: 10;
+    width: 502px;
+    height: 502px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 502px;
+    width: 502px;
+    border-radius: 50%;
+    /*border: 2px solid rgba(255, 192, 203, 0.486);*/
+    box-shadow: 1px 1px 10px -1px rgba(255, 192, 203, 0.486);
+    padding: 9px;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 462px;
+    width: 462px;
+    border-radius: 50%;
+    /*border: 2px solid rgba(255, 192, 203, 0.486);*/
+    box-shadow: 1px 1px 100px -1px rgba(255, 192, 203, 0.486);
+
+   
+}
+
+/*Panel*/
+.PanelContainer{
+    margin-top: 250px;
+    position: relative;
+}
+.PanelBtn{
+    cursor: pointer;
+    border-color: black;
+    border-width: 3px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    background-size: 100%;
+    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 50px;
+    border: transparent;
+}
+
+.PanelExtraPoints{
+    border-color: rgb(0, 44, 0);
+    background-color: rgb(0, 44, 0);
+}
+.PanelExtraPoints:hover{
+    border-color: rgba(0, 44, 0, 0.562);
+    background-color: rgba(0, 44, 0, 0.712);
+}
+
+.PanelMainly{
+    background-color: rgb(167, 167, 15);
+}
+.PanelMainly:hover{
+    background-color: rgba(167, 167, 15, 0.678);
+}
